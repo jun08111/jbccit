@@ -1,6 +1,7 @@
 #include "widget.h"
 #include "ui_widget.h"
 
+
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
@@ -19,6 +20,12 @@ void Widget::on_pb500_clicked()
    coin = coin + 500;
    ui->leMoney->setText(QString::number(coin));
    }
+   if(coin >= 200) ui->pbCoffee->setEnabled(true);
+   else ui->pbCoffee->setEnabled(false);
+   if(coin >= 100) ui->pbTea->setEnabled(true);
+   else ui->pbTea->setEnabled(false);
+   if(coin >= 250) ui->pbYul->setEnabled(true);
+   else ui->pbYul->setEnabled(false);
 
 }
 
@@ -28,6 +35,12 @@ void Widget::on_pb100_clicked()
     coin = coin + 100;
     ui->leMoney->setText(QString::number(coin));
     }
+    if(coin >= 200) ui->pbCoffee->setEnabled(true);
+    else ui->pbCoffee->setEnabled(false);
+    if(coin >= 100) ui->pbTea->setEnabled(true);
+    else ui->pbTea->setEnabled(false);
+    if(coin >= 250) ui->pbYul->setEnabled(true);
+    else ui->pbYul->setEnabled(false);
 
 }
 
@@ -37,6 +50,12 @@ void Widget::on_pb50_clicked()
     coin = coin + 50;
     ui->leMoney->setText(QString::number(coin));
     }
+    if(coin >= 200) ui->pbCoffee->setEnabled(true);
+    else ui->pbCoffee->setEnabled(false);
+    if(coin >= 100) ui->pbTea->setEnabled(true);
+    else ui->pbTea->setEnabled(false);
+    if(coin >= 250) ui->pbYul->setEnabled(true);
+    else ui->pbYul->setEnabled(false);
 
 }
 
@@ -46,6 +65,12 @@ void Widget::on_pb10_clicked()
     coin = coin + 10;
     ui->leMoney->setText(QString::number(coin));
     }
+    if(coin >= 200) ui->pbCoffee->setEnabled(true);
+    else ui->pbCoffee->setEnabled(false);
+    if(coin >= 100) ui->pbTea->setEnabled(true);
+    else ui->pbTea->setEnabled(false);
+    if(coin >= 250) ui->pbYul->setEnabled(true);
+    else ui->pbYul->setEnabled(false);
 
 }
 
@@ -55,8 +80,12 @@ void Widget::on_pbCoffee_clicked()
     coin = coin - 200;
     ui->leMoney->setText(QString::number(coin));
     }
-    else
-        ui->leMoney->setText("Need More Money");
+    if(coin >= 200) ui->pbCoffee->setEnabled(true);
+    else ui->pbCoffee->setEnabled(false);
+    if(coin >= 100) ui->pbTea->setEnabled(true);
+    else ui->pbTea->setEnabled(false);
+    if(coin >= 250) ui->pbYul->setEnabled(true);
+    else ui->pbYul->setEnabled(false);
 }
 
 void Widget::on_pbTea_clicked()
@@ -65,8 +94,12 @@ void Widget::on_pbTea_clicked()
     coin = coin - 100;
     ui->leMoney->setText(QString::number(coin));
     }
-    else
-        ui->leMoney->setText("Need More Money");
+    if(coin >= 200) ui->pbCoffee->setEnabled(true);
+    else ui->pbCoffee->setEnabled(false);
+    if(coin >= 100) ui->pbTea->setEnabled(true);
+    else ui->pbTea->setEnabled(false);
+    if(coin >= 250) ui->pbYul->setEnabled(true);
+    else ui->pbYul->setEnabled(false);
 }
 
 void Widget::on_pbYul_clicked()
@@ -75,8 +108,12 @@ void Widget::on_pbYul_clicked()
     coin = coin - 250;
     ui->leMoney->setText(QString::number(coin));
     }
-    else
-        ui->leMoney->setText("Need More Money");
+    if(coin >= 200) ui->pbCoffee->setEnabled(true);
+    else ui->pbCoffee->setEnabled(false);
+    if(coin >= 100) ui->pbTea->setEnabled(true);
+    else ui->pbTea->setEnabled(false);
+    if(coin >= 250) ui->pbYul->setEnabled(true);
+    else ui->pbYul->setEnabled(false);
 }
 
 void Widget::on_pbReset_clicked()
@@ -105,5 +142,8 @@ void Widget::on_pbReset_clicked()
     b = 0;
     c = 0;
     d = 0;
+    ui->pbCoffee->setEnabled(true);
+    ui->pbTea->setEnabled(true);
+    ui->pbYul->setEnabled(true);
     ui->leMoney->setText(QString::number(coin));
 }
