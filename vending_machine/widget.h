@@ -34,6 +34,8 @@ private slots:
 
     void on_pbReset_clicked();
 
+    void button_onoff();
+
 private:
     Ui::Widget *ui;
     int coin = 0;
@@ -41,6 +43,6 @@ private:
     int result;
     int a, b, c, d;//500,100,50,10(count per coin)
 
-};
 
+};
 #endif // WIDGET_H
